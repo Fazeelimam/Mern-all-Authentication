@@ -1,0 +1,117 @@
+/* .home {
+  position: relative;
+}
+.home button {
+  position: absolute;
+  top: 40px;
+  right: 100px;
+  padding: 12px 30px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  background: #0cbb69;
+  color: #fff;
+  transition: all 0.3s;
+}
+.home button:hover {
+  background: #068047;
+  color: #fff;
+  transition: all 0.3s;
+}
+@media(max-width: 1000px){
+    .home button{
+        right: 30px;
+    }
+} */
+
+/* .home {
+  position: relative;
+}
+
+.home button {
+  position: absolute;
+  top: 40px;
+  right: 100px;
+  padding: 12px 30px;
+  font-size: 20px;
+  font-weight: 500;
+  border: 2px solid #000;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home button:hover {
+  background: #000;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1000px) {
+  .home button {
+    right: 30px;
+  }
+} */
+
+
+.home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f9f9f9;
+  color: #111;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #111;
+  color: #fff;
+}
+
+.home-header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Logout button */
+.logout-btn {
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-header {
+    padding: 15px 20px;
+  }
+
+  .home-header .logo {
+    font-size: 1.2rem;
+  }
+
+  .logout-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+}

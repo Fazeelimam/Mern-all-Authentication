@@ -1,0 +1,101 @@
+// async function sendVerificationCode(verificationMethod, verificationCode, email, phone,name) {
+//   if (verificationMethod === "email") {
+//     const message = generateEmailTemplate(verificationCode);
+
+//     await sendEmail({
+//       email,
+//       subject: "Your Verification Code",
+//       message,
+//     });
+//     return `Verification email successfully sent to ${name}`
+
+//   } else if (verificationMethod === "phone") {
+//   const verificationCodeWithSpace = verificationCode.toString().split("").join(" ");
+//    await client.messages.create({
+//   body: `Your verification code is: ${verificationCodeWithSpace}`,
+//   from: process.env.TWILIO_PHONE_NUMBER,
+//   to: phone, // make sure this is in E.164 format, e.g., +923001234567
+// });
+//   else{
+//     throw new Errorhandler("Invalid verification method",500)
+//   }
+// }
+// }
+
+
+
+// export const login = catchErrorAsync(async (req, res, next) => {
+//   if (!req.body || Object.keys(req.body).length === 0) {
+//     return next(new Errorhandler("Email and Password are required.", 400));
+//   }
+
+//   const { email, password } = req.body;
+
+//   if (!email || !password) {
+//     return next(new Errorhandler("Email and Password are required.", 400));
+//   }
+
+//   const userDetail = await User.findOne({ email, accountVerified: true }).select("+password");
+//   if (!userDetail) {
+//     return next(new Errorhandler("Invalid email or password", 400));
+//   }
+
+//   const isPasswordMatched = await userDetail.comparePassword(password);
+//   if (!isPasswordMatched) {
+//     return next(new Errorhandler("Password Isn't matching", 400));
+//   }
+
+//   sendToken(userDetail, 200, `Welcome Back ${userDetail.name}`, res);
+// });
+
+
+// export const forgotPassword = catchErrorAsync(async(req,res,next)=>{
+//   const user = await User.findOne({
+//     email:req.body.email,
+//     accountVerified:true,
+//   });
+//   if (!user) {
+//     return next(new Errorhandler("User not found",404));
+//   }
+//   const resetToken = user.generateResetPasswordToken();
+//   await user.save({validateBeforeSave: false});
+//   const resetPasswordUrl = `${process.env.FRONTEND_URL}/password/reset/${resetToken}`;
+//   const message = `Your Reset password Token is ${resetPasswordUrl} \n\n If you have not requested this email kindly ignore it.`
+
+//   try {
+//     sendEmail({email: user.email,subject:"RESET APP PASSWORD",message});
+//     res.status(200).json({
+//       success: true,
+//       message: `Email sent to ${user.email} successfully.`
+//     })
+//   } catch (error) {
+//     user.resetPasswordToken = undefined;
+//     user.resetPasswordExpire = undefined;
+//     await user.save({validateBeforeSave: false});
+//     return next(new Errorhandler(error.message ? error.message : "Cannot sen reset password token."))
+//   }
+// })
+
+
+// export const resetPassword = catchErrorAsync(async(req,res,next)=>{
+//   const {token} = req.params;
+//   const resetPasswordToken = crypto.createHash("sha256").update(token).digest("hex");
+//   const user = await User.findOne({
+//     resetPasswordToken,
+//     resetPasswordExpire: {$gt:Date.now()}
+//   });
+//   if (!user) {
+//     return next(new Errorhandler("Reset password token is invalid or has been expired",400))
+//   }
+
+//   if (req.body.password !== req.body.confirmPassword) {
+//      return next(new Errorhandler("Password & Confirm password doesn't match",400))
+//   }
+
+//   user.password = req.body.password;
+//   user.resetPasswordExpire = undefined;
+//   user.resetPasswordToken = undefined;
+//   await user.save()
+
+//   sendToken(user, 200, "Reset Password successfully",res)
+// })
